@@ -1,17 +1,17 @@
 from pydantic import BaseModel
 
-from app.models.types import datetime_iso
+from app.models.types import datetime_iso, Gender, Colors
 
 
-class People(BaseModel):
+class Person(BaseModel):
     name: str
     height: int
     mass: int
-    hair_color: str
-    skin_color: str
-    eye_color: str
+    hair_color: Colors
+    skin_color: Colors
+    eye_color: Colors
     birth_year: str
-    gender: str
+    gender: Gender
     homeworld: str
     films: list[str]
     species: list[str]
